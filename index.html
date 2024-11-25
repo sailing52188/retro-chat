@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复古聊天室</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="login-screen" class="login-screen">
+            <div class="login-box">
+                <h1>复古聊天室</h1>
+                <input type="text" id="username" placeholder="输入你的昵称" maxlength="20">
+                <button id="join-btn">进入聊天室</button>
+                <p class="ip-hint">其他设备可访问: <br>http://192.168.0.109:8000</p>
+            </div>
+        </div>
+        
+        <div id="chat-screen" class="chat-screen hidden">
+            <div class="chat-container">
+                <div class="sidebar">
+                    <div class="user-list-container">
+                        <h3>在线用户</h3>
+                        <ul id="user-list"></ul>
+                    </div>
+                </div>
+                
+                <div class="main-chat">
+                    <div id="messages" class="messages"></div>
+                    
+                    <div class="input-area">
+                        <input type="text" id="message-input" placeholder="输入消息..." maxlength="500">
+                        <button id="send-btn">发送</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
